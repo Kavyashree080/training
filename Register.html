@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<SCRIPT language=Javascript>
+      <!--
+      function isNumberKey(evt)
+      {
+         var charCode = (evt.which) ? evt.which : event.keyCode
+         if (charCode > 31 && (charCode < 48 || charCode > 57))
+{
+alert("Only Number");
+            return false;
+}
+else
+{
+
+         return true;
+}
+      }
+      //-->
+   </SCRIPT>
+
+<style>
+body {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+  body  
+    {  
+        margin: 0;  
+        padding: 0;  
+        background-color:#6abadeba;  
+        font-family: 'Arial';  
+    }  
+    .login{  
+            width: 382px;  
+            overflow: hidden;  
+            margin: auto;  
+            margin: 20 0 0 450px;  
+            padding: 80px;  
+            background: #23463f;  
+            border-radius: 15px ;  
+              
+    }  
+    h2{  
+        text-align: center;  
+        color: #277582;  
+        padding: 20px;  
+    }  
+    label{  
+        color: #08ffd1;  
+        font-size: 17px;  
+    }  
+    #Uname{  
+        width: 300px;  
+        height: 30px;  
+        border: none;  
+        border-radius: 3px;  
+        padding-left: 8px;  
+    }  
+#phone{  
+        width: 300px;  
+        height: 30px;  
+        border: none;  
+        border-radius: 3px;  
+        padding-left: 8px;  
+    }  
+    #Pass{  
+        width: 300px;  
+        height: 30px;  
+        border: none;  
+        border-radius: 3px;  
+        padding-left: 8px;  
+          
+    }  
+#Pass1{  
+        width: 300px;  
+        height: 30px;  
+        border: none;  
+        border-radius: 3px;  
+        padding-left: 8px;  
+          
+    }  
+    .log{  
+        width: 300px;  
+        height: 30px;  
+        border: none;  
+        border-radius: 17px;  
+        padding-left: 7px;  
+        color: blue;  
+      
+      
+    }  
+    span{  
+        color: white;  
+        font-size: 17px;  
+    }  
+   
+
+</style>
+
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="loginpage.html">Home</a></li>
+  <li><a href="#news">Register</a></li>
+  
+</ul>
+
+<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+   <h2>Registration Page</h2><br>    
+        <div class="login">    
+        <form id="login" method="post" action="sucess.html">    
+            <label><b>First Name     
+            </b>    
+            </label>    
+            <input type="text" name="Fname" id="Uname" placeholder="Firstname" onchange="myFunction(this.value)" required> 
+ 	    <br><br>  
+		<label><b>Last Name     
+            </b>    
+            </label>  
+	    <input type="text" name="Lname" id="Uname" placeholder="Lastname" required>    
+            <br><br>  
+<label><b>User Name     
+            </b>    
+            </label> 
+	   <input type="text" name="Uname" id="Uname" placeholder="Username" required>    
+            <br><br> 
+<label><b>Recovery Email    
+            </b>    
+            </label>  
+	    <input type="email" name="phone" id="Uname" placeholder="Recovery Email" required>    
+            <br><br>  
+<label><b>Phone Number     
+            </b>    
+            </label> 
+ 	   <input type="text" name="Uname" id="phone" placeholder="Phone number" onkeypress="return isNumberKey(event)" required>    
+            <br><br>  
+            <label><b>Password     
+            </b>    
+            </label>    
+            <input type="Password" name="Pass" id="Pass" placeholder="Password" onchange="verifyPassword()" required="required"   />    
+            <br><br> 
+<label><b>Confirm Password</b>    
+            </label>  
+<br><br>  
+ <input type="Password" name="Pass1" id="Pass1" placeholder="Confirm Password" required="required" onchange="Validate()" />    
+            <br><br>  
+
+<input type="checkbox" id="check">    
+        <span>Agree Terms Condition</span>    
+        <br><br>    
+            <input type="submit" name="log" id="log" value="Register">       
+            <br><br>    
+               
+        </form>     
+     
+ </div>    
+    </div>     
+
+<script type="text/javascript">
+
+function verifyPassword() {  
+  var pw = document.getElementById("Pass").value;  
+  
+  if(pw.length < 8) {  
+     alert("**Password length must be atleast 8 characters");  
+     
+  }  
+  
+//maximum length of password validation  
+  if(pw.length > 15) {  
+     alert("**Password length must not exceed 15 characters");  
+     
+  } 
+}  
+
+ function Validate() {
+
+        var password = document.getElementById("Pass").value;
+
+        var confirmPassword = document.getElementById("Pass1").value;
+
+        if (password != confirmPassword) {
+           
+             alert("Passwords do not match.");
+        }
+      
+    
+}
+</script>
+
+</body>
+</html>
+
